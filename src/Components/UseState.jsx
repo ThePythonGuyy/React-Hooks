@@ -7,11 +7,22 @@ const UseState = () => {
   const initialState = 0;
   const [count1, setCount1] = useState(initialState);
   const [name, setName] = useState({ fstName: "", lstName: "" });
+  const [items, setItems] = useState([]);
 
   const incFive = () => {
     for (let i = 0; i < 5; i++) {
       setCount1((prevState) => prevState + 1);
     }
+  };
+
+  const addItem = () => {
+    setItems([
+      ...items,
+      {
+        id: items.length,
+        value: Math.floor(Math.random() * 11),
+      },
+    ]);
   };
 
   return (
@@ -55,6 +66,13 @@ const UseState = () => {
         <h2>Your first name is - {name.fstName}</h2>
         <h2>Your last name is - {name.lstName}</h2>
       </Form>
+
+      <button onClick={addItem}>Add Number</button>
+      <UL>
+        {items.map((item) => (
+          <li key={item.id}>{item.value}</li>
+        ))}
+      </UL>
     </Div>
   );
 };
@@ -63,6 +81,7 @@ export default UseState;
 
 const Div = styled.div`
   width: 100%;
+  max-width: 100vw;
   margin-top: 25px;
   /* background-color: yellow; */
   display: flex;
@@ -83,7 +102,13 @@ const Div2 = styled.div`
 `;
 
 const Form = styled.form`
-  input{
+  input {
     margin-left: 10px;
   }
+`;
+
+const UL = styled.ul`
+  list-style: none;
+  display: flex;
+  gap: 5px;
 `;
