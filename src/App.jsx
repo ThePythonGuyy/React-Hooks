@@ -7,6 +7,7 @@ import './App.css'
 import UseEffect from './Components/UseEffect'
 import AddMouse from './Components/AddMouse'
 import IntervalHook from './Components/IntervalHook'
+import FetchData from './Components/FetchData'
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
         <UseEffect univ={univ} setUniv={setUniv}/>
         <AddMouse />
         <IntervalHook />
+        <FetchData />
       </div>
       
     </>
