@@ -2,15 +2,11 @@
 import React, { useEffect, useState } from "react";
 
 //components
-import UseState from "./Components/UseState";
+import UseState from "./Components/useState/UseState";
 import "./App.css";
-import UseEffect from "./Components/UseEffect";
-import AddMouse from "./Components/AddMouse";
-import IntervalHook from "./Components/IntervalHook";
-import FetchData from "./Components/FetchData";
-import ContextHook1 from "./Components/ContextHook1";
-import UserReducer1 from "./Components/UserReducer1";
-import UserReducer2 from "./Components/UserReducer2";
+import UseEffect from "./Components/useEffect/UseEffect";
+import UserReducer from "./Components/UserReducer/UserReducer";
+import UseContext from "./Components/useContext/UseContext";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -24,18 +20,16 @@ function App() {
     <>
       <div style={{ marginBottom: "10vw", padding: "0" }}>
         <UseState univ={univ} />
+
         <UseEffect univ={univ} setUniv={setUniv} />
-        <AddMouse />
-        <IntervalHook />
-        <FetchData />
-        <UserContext.Provider value={'MERN'}>
-          <ChannelContext.Provider value={'Stack'}>
-            <ContextHook1 />
+        
+        <UserContext.Provider value={"MERN"}>
+          <ChannelContext.Provider value={"Stack"}>
+            <UseContext />
           </ChannelContext.Provider>
         </UserContext.Provider>
 
-        <UserReducer1 />
-        <UserReducer2 />
+        <UserReducer />
       </div>
     </>
   );

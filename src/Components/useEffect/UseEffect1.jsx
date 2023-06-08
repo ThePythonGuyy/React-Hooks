@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { styled } from "styled-components";
-const UseEffect = (props) => {
+const UseEffect1 = (props) => {
 
     const [count, setCount] = useState(0)
     const [test, setTest] = useState(0)
@@ -35,4 +35,4 @@ const Div = styled.div`
   
 `
 
-export default UseEffect
+export default UseEffect1
