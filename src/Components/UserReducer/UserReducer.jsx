@@ -5,6 +5,7 @@ import UserReducer2 from "./UserReducer2";
 import ComponentA from "./sub/ComponentA"
 import ComponentB from "./sub/ComponentB"
 import { styled } from "styled-components";
+import FetchData from "./FetchData";
 
 const initialState = {
   counter: 0,
@@ -43,6 +44,8 @@ const UserReducer = () => {
             <ComponentB />
       </Context.Provider>
       </div>
+
+      <FetchData />
     </Div>
   );
 };
