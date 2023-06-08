@@ -5,7 +5,7 @@ const ContextHook2 = () => {
   const user = useContext(UserContext);
   const channel = useContext(ChannelContext);
   return (
-    <div>
+    <div style={{margin:"30px auto", display: 'flex', justifyContent: 'space-around'}}>
       {user} {channel}
     </div>
   );

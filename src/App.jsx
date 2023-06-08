@@ -9,6 +9,8 @@ import AddMouse from "./Components/AddMouse";
 import IntervalHook from "./Components/IntervalHook";
 import FetchData from "./Components/FetchData";
 import ContextHook1 from "./Components/ContextHook1";
+import UserReducer1 from "./Components/UserReducer1";
+import UserReducer2 from "./Components/UserReducer2";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -20,7 +22,7 @@ function App() {
   });
   return (
     <>
-      <div style={{ margin: "0", padding: "0" }}>
+      <div style={{ marginBottom: "10vw", padding: "0" }}>
         <UseState univ={univ} />
         <UseEffect univ={univ} setUniv={setUniv} />
         <AddMouse />
@@ -31,6 +33,9 @@ function App() {
             <ContextHook1 />
           </ChannelContext.Provider>
         </UserContext.Provider>
+
+        <UserReducer1 />
+        <UserReducer2 />
       </div>
     </>
   );
