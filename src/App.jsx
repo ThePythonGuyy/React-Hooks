@@ -8,6 +8,7 @@ import UseEffect from "./Components/useEffect/UseEffect";
 import UserReducer from "./Components/UserReducer/UserReducer";
 import UseContext from "./Components/useContext/UseContext";
 import UseCallback from "./Components/UseCallback/UseCallback";
+import UseMemo from "./Components/UseMemo/UseMemo";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -33,6 +34,8 @@ function App() {
         <UserReducer />
 
         <UseCallback />
+
+        <UseMemo />
       </div>
     </>
   );
