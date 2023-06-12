@@ -10,6 +10,7 @@ import UseContext from "./Components/useContext/UseContext";
 import UseCallback from "./Components/UseCallback/UseCallback";
 import UseMemo from "./Components/UseMemo/UseMemo";
 import UseRef from "./Components/UseRef/UseRef";
+import CustomHook from "./Components/CustomHook/CustomHook";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -39,6 +40,8 @@ function App() {
         <UseMemo />
 
         <UseRef />
+
+        <CustomHook />
       </div>
     </>
   );
