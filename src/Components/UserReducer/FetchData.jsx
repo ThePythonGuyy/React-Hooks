@@ -10,10 +10,19 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "SUCCESS":
-      return { ...state, loading: false, post: action.payload, error: "" };
+      return {
+        ...state,
+        loading: false,
+        post: action.payload,
+        error: "",
+      };
 
     case "ERROR":
-      return { ...state, loading: false, error: "Something went wrong" };
+      return {
+        ...state,
+        loading: false,
+        error: "Something went wrong",
+      };
 
     default:
       return state;

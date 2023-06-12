@@ -7,6 +7,7 @@ import "./App.css";
 import UseEffect from "./Components/useEffect/UseEffect";
 import UserReducer from "./Components/UserReducer/UserReducer";
 import UseContext from "./Components/useContext/UseContext";
+import UseCallback from "./Components/UseCallback/UseCallback";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -30,6 +31,8 @@ function App() {
         </UserContext.Provider>
 
         <UserReducer />
+
+        <UseCallback />
       </div>
     </>
   );
